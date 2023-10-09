@@ -2,37 +2,74 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main-container{
+  margin: 20px;
+   
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav{
+  border: 1px solid black;
+  justify-content: space-between;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 20px;
+  background-color: skyblue;
+}
+
+.nav-buttons{
+display: flex;
+flex-direction: row;
+gap: 1rem;
+}
+
+main{
+  background-color: aquamarine;
+}
+
+.stud-datas{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 2rem;
+  padding: 50px;
+ }
+
+ .stud-card{
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 15px;
+  background-color: white;
+  padding: 2px;
+ }
+
+ .stud-button{
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  gap: 1rem;
+  justify-content: center;
+ }
+
+ .stud-button>button{
+ width: 60px;
+ padding: 5px;
+ border-radius: 10px;
+ border: none;
+ }
+
+ .stud-button>button:hover{
+  background-color: skyblue;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
   }
-  to {
-    transform: rotate(360deg);
+
+  input{
+    width: 50%;
+    margin: 5px;
+    padding: 5px;
   }
-}
+
+  .txtbx{
+    border: 1px solid black;
+    padding: 10px;
+  }
