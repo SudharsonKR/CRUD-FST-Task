@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import Base from "../Base/base";
 import { useNavigate } from "react-router-dom";
+import { ctxt } from "../App";
 // import Editupdateinfo from "./EditUpdateInfo";
 
 
-const Students=({students, setStudents})=>{
+const Students=()=>{
+    const {students, setStudents}=useContext(ctxt)
+    
     // const [editstud, setEditstud]=useState('');
     const navigate = useNavigate();
     const deleteStud=(StudentID)=>{

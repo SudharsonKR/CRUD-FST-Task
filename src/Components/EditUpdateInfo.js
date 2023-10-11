@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Base from "../Base/base";
 import { useNavigate, useParams } from "react-router-dom";
+import { ctxt } from "../App";
 
 
-function Editupdateinfo({students, setStudents}){
+function Editupdateinfo(){
+    const {students, setStudents}=useContext(ctxt)
     const {idNo}=useParams()
     // console.log("newid", idNo);
     const navigate=useNavigate();
@@ -27,9 +29,7 @@ function Editupdateinfo({students, setStudents}){
         setGender(studentdata.gender)
         setSkills(studentdata.skills)
     }
-    else{
-        console.log("Not found student data")
-    }
+    
     }, [idNo, students])
     const updateStudent = () => {
         
@@ -67,7 +67,7 @@ function Editupdateinfo({students, setStudents}){
             onChange={(e)=>setGender(e.target.value)}/>
             <input placeholder="Enter Student Skills" type="text" value={Skills}
             onChange={(e)=>setSkills(e.target.value)}/>
-            <div>
+            <div className="stud-button">
             <button onClick={updateStudent}>Update</button>
             </div>
         </div>

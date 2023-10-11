@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Base from "../Base/base";
 import { useNavigate } from "react-router-dom";
+import { ctxt } from "../App";
 
-function Addinfo({students, setStudents}){
-    
+function Addinfo(){
+    const {students, setStudents}=useContext(ctxt)
     const navigage = useNavigate();
     const [Id, setId]=useState("")
     const [Name, setName]=useState("")
@@ -47,7 +48,7 @@ navigage("/Students")
             onChange={(e)=>setGender(e.target.value)}/>
             <input placeholder="Enter Student Skills" type="text" value={Skills}
             onChange={(e)=>setSkills(e.target.value)}/>
-            <div>
+            <div className="teach-button">
             <button onClick={handleAddinfo}>Add Informatoin</button>
             </div>
         </div>

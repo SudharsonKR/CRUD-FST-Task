@@ -12,6 +12,9 @@ return(
             <button onClick={()=>navigate("/")}>Dashbord/Home</button>
             <button onClick={()=>navigate("/Students")}>Students Data</button>
             <button onClick={()=>navigate("/addinfo")}>Add Students</button>
+            <button onClick={()=>navigate("/Teachers")}>Teachers Data</button>
+            <button onClick={()=>navigate("/Teacheradd")}>Add Teacher</button>
+            
             </div>
             </nav>
         </header>
